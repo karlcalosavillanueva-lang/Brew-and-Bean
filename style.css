@@ -1,0 +1,499 @@
+```css
+/* =========================================
+   BREW & BEAN COFFEE SHOP
+   Complete Website Stylesheet
+   ========================================= */
+
+/* GENERAL STYLES */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5eee6;
+    color: #3b2416;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h2 {
+    color: #4b2e1e;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #4b2e1e;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #e0b98c;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 40px 50px;
+    background-color: #dfc3a3;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    color: #4b2e1e;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   GENERAL BUTTON STYLES
+   ========================================= */
+
+.btn {
+    display: inline-block;
+    background-color: #b87945;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8f5730;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   FEATURED PRODUCTS SECTION
+   ========================================= */
+
+.featured {
+    padding: 50px 30px 60px;
+    text-align: center;
+    background-color: #f5eee6;
+}
+
+.featured h2 {
+    margin-bottom: 30px;
+}
+
+/* PRODUCT LAYOUT */
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 28px;
+    max-width: 1100px;
+    margin: 30px auto 0;
+}
+
+/* INDIVIDUAL PRODUCT CARD */
+
+.product {
+    background-color: #ffffff;
+    width: 270px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(59, 36, 22, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(59, 36, 22, 0.14);
+}
+
+/* =========================================
+   COFFEE PRODUCT IMAGES
+   ========================================= */
+
+/* Supports both image classes if either is
+   present in the HTML. */
+
+.product img,
+.product-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.product img:hover,
+.product-image:hover {
+    transform: scale(1.03);
+}
+
+/* Fallback for the original coffee emoji */
+
+.coffee-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   PRODUCT INFORMATION
+   ========================================= */
+
+.product h3 {
+    color: #4b2e1e;
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.product p {
+    color: #6b5140;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.price {
+    color: #b87945;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 8px 0 15px;
+}
+
+/* =========================================
+   ORDER BUTTONS
+   ========================================= */
+
+button {
+    display: inline-block;
+    background-color: #b87945;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #8f5730;
+    transform: translateY(-2px);
+}
+
+button:focus-visible,
+.btn:focus-visible,
+nav a:focus-visible {
+    outline: 3px solid #e0b98c;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: #4b2e1e;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 0;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* =========================================
+   TABLET RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+    nav {
+        padding: 20px 30px;
+    }
+
+    .hero {
+        padding: 40px 30px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .products {
+        gap: 20px;
+    }
+
+    .product {
+        width: 260px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 35px 20px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .featured {
+        padding: 35px 15px 45px;
+    }
+
+    .featured h2 {
+        font-size: 26px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        margin-top: 25px;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 320px;
+        padding: 22px;
+    }
+
+    .product img,
+    .product-image {
+        height: 190px;
+    }
+
+    .product p {
+        font-size: 15px;
+    }
+
+    footer {
+        padding: 22px 15px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE SCREENS
+   ========================================= */
+
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .featured h2 {
+        font-size: 23px;
+    }
+
+    .product {
+        padding: 18px;
+    }
+
+    .product img,
+    .product-image {
+        height: 160px;
+    }
+}
+```
+/* ABOUT SECTION */
+.about {
+padding: 60px 50px;
+background-color: #f5eee6;
+text-align: center;
+}
+
+.about-content {
+max-width: 800px;
+margin: 0 auto;
+}
+
+.about h2 {
+color: #4b2e1e;
+font-size: 32px;
+margin-bottom: 25px;
+}
+
+.about p {
+color: #3b2416;
+font-size: 18px;
+line-height: 1.8;
+margin-bottom: 20px;
+}
+
+/* CONTACT SECTION */
+.contact {
+padding: 60px 50px;
+background-color: #dfc3a3;
+text-align: center;
+}
+
+.contact-content {
+max-width: 800px;
+margin: 0 auto;
+}
+
+.contact h2 {
+color: #4b2e1e;
+font-size: 32px;
+margin-bottom: 25px;
+}
+
+.contact p {
+color: #3b2416;
+font-size: 18px;
+line-height: 1.8;
+margin-bottom: 15px;
+}
+
+.contact a {
+color: #8f5730;
+text-decoration: none;
+font-weight: bold;
+}
+
+.contact a:hover {
+color: #4b2e1e;
+text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+.about,
+.contact {
+padding: 40px 20px;
+}
+
+```
+.about h2,
+.contact h2 {
+    font-size: 28px;
+}
+
+.about p,
+.contact p {
+    font-size: 16px;
+}
+```
+
+}
